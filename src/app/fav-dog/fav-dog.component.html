@@ -1,0 +1,5 @@
+<mat-grid-list cols="3" *ngIf='notEmpty'> 
+    <mat-grid-tile *ngFor='let dog of fdogs'>
+        <img [src]="dog" alt='Not-available' class='img-dog'/>
+    </mat-grid-tile>
+</mat-grid-list>

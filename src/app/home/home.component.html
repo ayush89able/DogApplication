@@ -1,0 +1,38 @@
+<h1 style="text-align: center;font-family:cursive;">Place to see and download dog's images of various breeds</h1>
+<h2 style="text-align: center">Made With 
+  <mat-icon aria-hidden="false">sentiment_satisfied_alt</mat-icon>
+  for Dog Lovers. Hope you will
+  <mat-icon aria-hidden="false">thumb_up</mat-icon>
+</h2>
+<br>
+<mat-form-field style="margin-left:5em;margin-top:1em;">
+    <mat-label>Select Dog Breed</mat-label>
+    <mat-select [(value)]='selectedBreed'>
+      <mat-option *ngFor="let breed of breeds" [value]="breed" (click)='change(breed)'>
+        {{breed}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+      <mat-label>Select Number</mat-label>
+      <mat-select [(value)]='selectedNumber'>
+        <mat-option *ngFor="let num of Numbers" [value]="num" (click)='changeNum(num)'>
+          {{num}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+   
+  <button mat-raised-button color='primary' style="margin-left:2em;"(click)='clickedOnFindDogs()'>Find Dogs</button>   
+
+<div *ngIf='dataCame'>
+    <img src={{dogImageUrl}} alt='Not-available' style="width: 500px;height: 500px; display: block; margin:auto;border-radius: 50%;"> 
+</div>
+
+<mat-grid-list cols="3" *ngIf='dataArrayCame'> 
+    <mat-grid-tile *ngFor='let dog of dogs'>
+        <img src={{dog}} alt='Not-available'  (click)="onPicClick(dog)" class="img-dog">
+    </mat-grid-tile>
+</mat-grid-list>
+
+<!-- [disabled]='!selectBreedPlease || !selectNumberPlease' -->

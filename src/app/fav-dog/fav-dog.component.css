@@ -1,0 +1,15 @@
+.img-dog{
+    width: 350px;
+    height: 350px;
+    border:1px solid black;
+    border-radius: 20px;
+    transition: 1s;
+}
+
+.img-dog:hover{
+    width: 350px;
+    height: 350px;
+    border:1px solid black;
+    border-radius: 20px;
+    transform: scale(1.2);
+}

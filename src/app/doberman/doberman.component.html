@@ -1,0 +1,11 @@
+<h3 style="text-align: center">Click the pics to add to Favoriate Dogs Tab</h3>
+<br>
+<button mat-raised-button color="primary" style="display: block;margin: auto;" (click)='clickedOnDoberman9()'>Find More Dobermans</button>
+
+<mat-grid-list cols="3" *ngIf='dataArrayCame'> 
+        <mat-grid-tile *ngFor='let dog of dogs'>
+            <img src={{dog}} alt='Not-available'
+            (click)="onPicClick(dog)"
+            class="img-dog">
+        </mat-grid-tile>
+</mat-grid-list>

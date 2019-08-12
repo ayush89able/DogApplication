@@ -1,0 +1,36 @@
+.mycard{
+    display: block;
+    margin:auto;
+    width: 25em;
+    border: black solid 0.5px;
+}
+
+.example-full-width{
+    width: 100%;
+}
+
+.mybutton{
+    margin: auto;
+    display: block;
+    margin-top: 2em;
+}
+
+.filterButton{
+    margin-left: 10px; 
+}
+
+nav a .active{
+    font:20px;
+}
+
+.container{
+    background-color: orange;
+}
+
+.container button:hover{
+    background-color: brown;
+}
+
+.container button.active-link{ 
+    background-color: orangered;
+}
